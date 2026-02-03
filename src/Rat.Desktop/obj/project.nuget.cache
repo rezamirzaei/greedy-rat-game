@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GQWpSjok/MA=",
+  "success": true,
+  "projectFilePath": "/Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/Rat.Desktop.csproj",
+  "expectedPackageFiles": [
+    "/Users/rezami/.nuget/packages/raylib-cs/6.0.0/raylib-cs.6.0.0.nupkg.sha512",
+    "/Users/rezami/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

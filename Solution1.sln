@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rat.Game", "src\\Rat.Game\\Rat.Game.csproj", "{0F997D2C-D88B-4ADB-BB2F-9EC306D59BF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rat.Cli", "src\\Rat.Cli\\Rat.Cli.csproj", "{2B5FEDE4-04E0-40A7-AF85-A0B2976C5C87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rat.Desktop", "src\\Rat.Desktop\\Rat.Desktop.csproj", "{31EC8E96-39FE-4F2B-AAA2-5B93A41DD9D7}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F997D2C-D88B-4ADB-BB2F-9EC306D59BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F997D2C-D88B-4ADB-BB2F-9EC306D59BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F997D2C-D88B-4ADB-BB2F-9EC306D59BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F997D2C-D88B-4ADB-BB2F-9EC306D59BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5FEDE4-04E0-40A7-AF85-A0B2976C5C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5FEDE4-04E0-40A7-AF85-A0B2976C5C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5FEDE4-04E0-40A7-AF85-A0B2976C5C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5FEDE4-04E0-40A7-AF85-A0B2976C5C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EC8E96-39FE-4F2B-AAA2-5B93A41DD9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EC8E96-39FE-4F2B-AAA2-5B93A41DD9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EC8E96-39FE-4F2B-AAA2-5B93A41DD9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EC8E96-39FE-4F2B-AAA2-5B93A41DD9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
