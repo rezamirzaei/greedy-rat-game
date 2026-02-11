@@ -36,5 +36,33 @@ public sealed class Level
 
         return _cells[position.Y, position.X];
     }
-}
 
+    /// <summary>
+    /// Gets the Manhattan distance from a position to the gem.
+    /// </summary>
+    public int GetDistanceToGem(Position position) =>
+        Math.Abs(position.X - GemPosition.X) + Math.Abs(position.Y - GemPosition.Y);
+
+    /// <summary>
+    /// Gets a hint about which direction the gem is relative to a position.
+    /// Returns (horizontalHint, verticalHint) where:
+    /// -1 = gem is left/up, 0 = same column/row, 1 = gem is right/down
+    /// </summary>
+    public (int horizontal, int vertical) GetGemDirectionHint(Position position)
+    {
+        var horizontal = GemPosition.X.CompareTo(position.X);
+        var vertical = GemPosition.Y.CompareTo(position.Y);
+        return (horizontal, vertical);
+    }
+
+    /// <summary>
+    /// Gets a "temperature" reading (0.0 = cold/far, 1.0 = hot/close).
+    /// </summary>
+    public float GetGemTemperature(Position position)
+    {
+        var maxDistance = Width + Height - 2;
+        if (maxDistance <= 0) return 1f;
+        var distance = GetDistanceToGem(position);
+        return 1f - (float)distance / maxDistance;
+    }
+}

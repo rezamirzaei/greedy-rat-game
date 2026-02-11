@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rat.Game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f77a8cf267b167f208b4b4c4abe0e26350df8f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a74e08f34fcfc247fde5fcb33b099a15de87dcf5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rat.Game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rat.Game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
