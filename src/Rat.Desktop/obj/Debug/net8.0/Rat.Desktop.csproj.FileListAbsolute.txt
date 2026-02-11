@@ -3,6 +3,7 @@
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/Rat.Desktop.AssemblyInfoInputs.cache
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/Rat.Desktop.AssemblyInfo.cs
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/Rat.Desktop.csproj.CoreCompileInputs.cache
+/Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/Rat.Desktop.sourcelink.json
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/bin/Debug/net8.0/Rat.Desktop
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/bin/Debug/net8.0/Rat.Desktop.deps.json
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/bin/Debug/net8.0/Rat.Desktop.runtimeconfig.json
@@ -22,4 +23,3 @@
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/Rat.Desktop.pdb
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/Rat.Desktop.genruntimeconfig.cache
 /Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/ref/Rat.Desktop.dll
-/Users/rezami/RiderProjects/Solution1/src/Rat.Desktop/obj/Debug/net8.0/Rat.Desktop.sourcelink.json

@@ -5,8 +5,8 @@
 /Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/Rat.Game.AssemblyInfoInputs.cache
 /Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/Rat.Game.AssemblyInfo.cs
 /Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/Rat.Game.csproj.CoreCompileInputs.cache
+/Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/Rat.Game.sourcelink.json
 /Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/Rat.Game.dll
 /Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/refint/Rat.Game.dll
 /Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/Rat.Game.pdb
 /Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/ref/Rat.Game.dll
-/Users/rezami/RiderProjects/Solution1/src/Rat.Game/obj/Debug/net8.0/Rat.Game.sourcelink.json
