@@ -6,7 +6,7 @@ public sealed class LevelGenerator
 {
     public Level Generate(ChapterSettings settings, IRng rng)
     {
-        const int maxAttempts = 250;
+        const int maxAttempts = 500;
 
         for (var attempt = 0; attempt < maxAttempts; attempt++)
         {
@@ -25,9 +25,14 @@ public sealed class LevelGenerator
 
         var start = new Position(rng.Next(0, width), rng.Next(0, height));
         var gem = PickGemPosition(rng, width, height, start);
-        var safeRadius = settings.ChapterNumber <= 2 ? 1 : 0;
+        
+        // Safe radius around start and gem to ensure playability
+        var safeRadiusStart = settings.ChapterNumber <= 2 ? 2 : 1;
+        var safeRadiusGem = 1; // Always keep area around gem clear
 
         var contents = new CellContent[height, width];
+        var snakeCount = 0;
+        var maxSnakes = Math.Max(1, (width * height) / 12); // Limit snakes
 
         for (var y = 0; y < height; y++)
         {
@@ -46,9 +51,26 @@ public sealed class LevelGenerator
                     continue;
                 }
 
-                if (safeRadius > 0 && ManhattanDistance(pos, start) <= safeRadius)
+                // Keep area around start clear
+                if (safeRadiusStart > 0 && ManhattanDistance(pos, start) <= safeRadiusStart)
                 {
                     contents[y, x] = CellContent.Empty;
+                    continue;
+                }
+                
+                // Keep area around gem mostly clear (no rocks/snakes)
+                if (safeRadiusGem > 0 && ManhattanDistance(pos, gem) <= safeRadiusGem)
+                {
+                    // Can still place power-ups near gem
+                    var powerUpRoll = rng.NextDouble();
+                    if (powerUpRoll < settings.HealthPickupChance)
+                        contents[y, x] = CellContent.HealthPickup;
+                    else if (powerUpRoll < settings.HealthPickupChance + settings.ShieldChance)
+                        contents[y, x] = CellContent.Shield;
+                    else if (powerUpRoll < settings.HealthPickupChance + settings.ShieldChance + settings.SpeedBoostChance)
+                        contents[y, x] = CellContent.SpeedBoost;
+                    else
+                        contents[y, x] = CellContent.Empty;
                     continue;
                 }
 
@@ -62,10 +84,12 @@ public sealed class LevelGenerator
                     continue;
                 }
                 
+                // Limit snakes to prevent overwhelming the player
                 cumulative += settings.SnakeChance;
-                if (roll < cumulative)
+                if (roll < cumulative && snakeCount < maxSnakes)
                 {
                     contents[y, x] = CellContent.Snake;
+                    snakeCount++;
                     continue;
                 }
                 
@@ -94,7 +118,7 @@ public sealed class LevelGenerator
             }
         }
 
-        EnsureMinimumPieces(contents, start, gem, safeRadius, settings.ChapterNumber, rng);
+        EnsureMinimumPieces(contents, start, gem, safeRadiusStart, settings.ChapterNumber, rng);
 
         if (!IsReachable(contents, start, gem))
             return null;

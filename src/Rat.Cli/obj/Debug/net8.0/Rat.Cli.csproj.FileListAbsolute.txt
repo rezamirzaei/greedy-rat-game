@@ -16,3 +16,4 @@
 /Users/rezami/RiderProjects/Solution1/src/Rat.Cli/obj/Debug/net8.0/Rat.Cli.pdb
 /Users/rezami/RiderProjects/Solution1/src/Rat.Cli/obj/Debug/net8.0/Rat.Cli.genruntimeconfig.cache
 /Users/rezami/RiderProjects/Solution1/src/Rat.Cli/obj/Debug/net8.0/ref/Rat.Cli.dll
+/Users/rezami/RiderProjects/Solution1/src/Rat.Cli/obj/Debug/net8.0/Rat.Cli.sourcelink.json

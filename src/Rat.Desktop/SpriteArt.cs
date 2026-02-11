@@ -4,35 +4,37 @@ namespace Rat.Desktop;
 
 internal static class SpriteArt
 {
+    // Cute, expressive rat character
     public static SpriteDefinition RatA { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
             "................",
-            "................",
-            "......ee........",
-            ".....eBBBe......",
-            "....eBBBBBe.....",
-            "...eBBbBBbBe....",
-            "..eBBBBBBBBBe...",
-            "..eBBBkBBBkBe...",
-            "..eBBBBBBBBBe...",
-            "...eBBBBBBBe....",
-            "....eBBBBBe.....",
-            ".....eBBBe......",
-            "......ee..ttt...",
-            "...........t....",
+            "....pp....pp....",
+            "...pPPp..pPPp...",
+            "...pPPPppPPPp...",
+            "..pPPPPPPPPPPp..",
+            "..pPPPPPPPPPPp..",
+            "..pPPowPPwoPPp..",
+            "..pPPPPnPPPPPp..",
+            "..pPPPPPPPPPPp..",
+            "...pPPPPPPPPp...",
+            "....pPPPPPPp....",
+            ".....pppppp.....",
+            "......pppp..tt..",
+            "............t...",
             "................",
             "................",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['e'] = new Color(238, 172, 170, 255), // ear pink
-            ['B'] = new Color(196, 140, 82, 255),  // body light
-            ['b'] = new Color(168, 112, 60, 255),  // body shade
-            ['k'] = new Color(24, 24, 28, 255),    // eyes
-            ['t'] = new Color(225, 170, 164, 255), // tail
+            ['p'] = new Color(90, 70, 50, 255),    // outline brown
+            ['P'] = new Color(200, 160, 120, 255), // body fur
+            ['o'] = new Color(255, 255, 255, 255), // eye white
+            ['w'] = new Color(20, 20, 30, 255),    // eye pupil
+            ['n'] = new Color(255, 150, 150, 255), // nose pink
+            ['t'] = new Color(255, 180, 170, 255), // tail
         });
 
     public static SpriteDefinition RatB { get; } = new(
@@ -41,54 +43,56 @@ internal static class SpriteArt
         Pixels: new[]
         {
             "................",
-            "................",
-            "......ee........",
-            ".....eBBBe......",
-            "....eBBBBBe.....",
-            "...eBBbBBbBe....",
-            "..eBBBBBBBBBe...",
-            "..eBBBkBBBkBe...",
-            "..eBBBBBBBBBe...",
-            "...eBBBBBBBe....",
-            "....eBBBBBe.....",
-            ".....eBBBe......",
-            "...ttt..ee......",
-            "....t...........",
+            "....pp....pp....",
+            "...pPPp..pPPp...",
+            "...pPPPppPPPp...",
+            "..pPPPPPPPPPPp..",
+            "..pPPPPPPPPPPp..",
+            "..pPPowPPwoPPp..",
+            "..pPPPPnPPPPPp..",
+            "..pPPPPPPPPPPp..",
+            "...pPPPPPPPPp...",
+            "....pPPPPPPp....",
+            ".....pppppp.....",
+            "..tt..pppp......",
+            "...t............",
             "................",
             "................",
         },
         Palette: RatA.Palette);
 
+    // Solid, detailed rock
     public static SpriteDefinition Rock { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
             "................",
-            "................",
-            "......oooo......",
-            "....ooOOOOoo....",
-            "...oOOOHHOOOo...",
-            "..oOOHHHHHOOo...",
-            "..oOOHHHhHOOo...",
-            "..oOOHHhhhOOo...",
-            "..oOOHHhhhOOo...",
-            "..oOOHHHhHOOo...",
-            "..oOOHHHHHOOo...",
-            "...oOOOHHOOOo...",
-            "....ooOOOOoo....",
-            "......oooo......",
+            ".....oooooo.....",
+            "....oHHHHHHo....",
+            "...oHHHHhhHHo...",
+            "..oHHHHhhhhHHo..",
+            "..oHHhhhhhhhHo..",
+            "..oHhhhhsshHHo..",
+            "..oHhhhsssshHo..",
+            "..oHhhhsssshHo..",
+            "..oHhhhhsshHHo..",
+            "..oHHhhhhhhhHo..",
+            "...oHHhhhhHHo...",
+            "....oHHHHHHo....",
+            ".....oooooo.....",
             "................",
             "................",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['o'] = new Color(40, 40, 52, 255),    // outline
-            ['O'] = new Color(126, 126, 140, 255), // base
-            ['H'] = new Color(170, 170, 186, 255), // highlight
-            ['h'] = new Color(104, 104, 118, 255), // shadow
+            ['o'] = new Color(50, 50, 60, 255),    // dark outline
+            ['H'] = new Color(140, 140, 155, 255), // highlight
+            ['h'] = new Color(100, 100, 115, 255), // mid tone
+            ['s'] = new Color(70, 70, 85, 255),    // shadow
         });
 
+    // Menacing but clear snake
     public static SpriteDefinition SnakeA { get; } = new(
         Width: 16,
         Height: 16,
@@ -96,25 +100,27 @@ internal static class SpriteArt
         {
             "................",
             "................",
-            ".....gggg.......",
-            "...ggGGGGgg.....",
-            "..gGGGggGGGg....",
-            "..gGGg..gGGg....",
-            "...gGGggGGg.....",
-            "....gGGGGg......",
-            ".....gGGg.......",
-            "....gGGGGg......",
-            "...gGGggGGg.....",
-            "..gGGg..gGGg....",
-            "..gGGGggGGGg....",
-            "...ggGGGGgg.....",
-            ".....gggg.......",
+            "....dddd........",
+            "...dGGGGd.......",
+            "..dGgGGgGd......",
+            "..dGeGGeGd......",
+            "...dGGGGd.......",
+            "....dGGd........",
+            ".....dGGd.......",
+            "......dGGd......",
+            ".......dGGd.....",
+            "........dGGGd...",
+            ".........dGGd...",
+            "..........dd....",
+            "................",
             "................",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['g'] = new Color(34, 70, 46, 255),    // outline
-            ['G'] = new Color(66, 196, 98, 255),   // body
+            ['d'] = new Color(30, 80, 40, 255),    // dark outline
+            ['G'] = new Color(80, 200, 100, 255),  // body green
+            ['g'] = new Color(60, 160, 80, 255),   // body pattern
+            ['e'] = new Color(255, 50, 50, 255),   // eyes red
         });
 
     public static SpriteDefinition SnakeB { get; } = new(
@@ -124,53 +130,56 @@ internal static class SpriteArt
         {
             "................",
             "................",
-            ".....gggg.......",
-            "...ggGGGGgg.....",
-            "..gGGGggGGGg....",
-            "..gGGg..gGGg....",
-            "...gGGggGGg.....",
-            "....gGGGGg......",
-            ".....gGGg..r....",
-            "....gGGGGg.r....",
-            "...gGGggGGg.....",
-            "..gGGg..gGGg....",
-            "..gGGGggGGGg....",
-            "...ggGGGGgg.....",
-            ".....gggg.......",
+            "....dddd........",
+            "...dGGGGd.......",
+            "..dGgGGgGd......",
+            "..dGeGGeGdrr....",
+            "...dGGGGdrr.....",
+            "....dGGd........",
+            ".....dGGd.......",
+            "......dGGd......",
+            ".......dGGd.....",
+            "........dGGGd...",
+            ".........dGGd...",
+            "..........dd....",
+            "................",
             "................",
         },
         Palette: new Dictionary<char, Color>(SnakeA.Palette)
         {
-            ['r'] = new Color(226, 70, 70, 255), // tongue
+            ['r'] = new Color(220, 50, 80, 255), // tongue
         });
 
+    // Beautiful, shimmering gem - the goal!
     public static SpriteDefinition GemA { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
             "................",
-            ".......yy.......",
-            "......yYYy......",
-            ".....yYCCYy.....",
-            "....yYCCCCYy....",
-            "...yYCCCCCCYy...",
-            "..yYCCCCCCCCYy..",
-            ".yYCCCCCCCCCCYy.",
-            ".yYCCCCCCCCCCYy.",
-            "..yYCCCCCCCCYy..",
-            "...yYCCCCCCYy...",
-            "....yYCCCCYy....",
-            ".....yYCCYy.....",
-            "......yYYy......",
-            ".......yy.......",
+            ".......gg.......",
+            "......gGGg......",
+            ".....gGCCGg.....",
+            "....gGCcCCGg....",
+            "...gGCcccCCGg...",
+            "..gGCccWccCCGg..",
+            ".gGCcccWWcccCGg.",
+            ".gGCccccccccCGg.",
+            "..gGCccccccCGg..",
+            "...gGCccccCGg...",
+            "....gGCccCGg....",
+            ".....gGCCGg.....",
+            "......gGGg......",
+            ".......gg.......",
             "................",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['y'] = new Color(96, 78, 24, 255),     // outline
-            ['Y'] = new Color(234, 204, 90, 255),   // gold
-            ['C'] = new Color(120, 220, 255, 255),  // crystal
+            ['g'] = new Color(30, 100, 130, 255),  // outline
+            ['G'] = new Color(60, 180, 220, 255),  // outer glow
+            ['C'] = new Color(100, 220, 255, 255), // crystal
+            ['c'] = new Color(150, 240, 255, 255), // crystal light
+            ['W'] = new Color(255, 255, 255, 255), // sparkle
         });
 
     public static SpriteDefinition GemB { get; } = new(
@@ -179,71 +188,71 @@ internal static class SpriteArt
         Pixels: new[]
         {
             "................",
-            ".......yy.......",
-            "......yYYy......",
-            ".....yYCCYy.....",
-            "....yYCCCCYy....",
-            "...yYCCCCCCYy...",
-            "..yYCCCCCCCCYy..",
-            ".yYCCCC*CCCCCYy.",
-            ".yYCCCCCC*CCCYy.",
-            "..yYCCCCCCCCYy..",
-            "...yYCCCCCCYy...",
-            "....yYCCCCYy....",
-            ".....yYCCYy.....",
-            "......yYYy......",
-            ".......yy.......",
+            ".......gg.......",
+            "......gGGg......",
+            ".....gGCCGg.....",
+            "....gGCcCCGg....",
+            "...gGCcccCCGg...",
+            "..gGCccccWCCGg..",
+            ".gGCcccccWWcCGg.",
+            ".gGCccccccccCGg.",
+            "..gGCccWcccCGg..",
+            "...gGCccccCGg...",
+            "....gGCccCGg....",
+            ".....gGCCGg.....",
+            "......gGGg......",
+            ".......gg.......",
             "................",
         },
-        Palette: new Dictionary<char, Color>(GemA.Palette)
-        {
-            ['*'] = new Color(255, 255, 255, 255),
-        });
+        Palette: GemA.Palette);
 
+    // Clear targeting crosshair
     public static SpriteDefinition Crosshair { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
-            "................",
-            "......rrrr......",
-            ".....r....r.....",
+            ".......rr.......",
+            ".......rr.......",
+            ".......rr.......",
+            ".......rr.......",
             "....r..rr..r....",
-            "...r..r..r..r...",
-            "..r..r....r..r..",
-            "..r..r.rr.r..r..",
-            "rr..r.r..r.r..rr",
-            "rr..r.r..r.r..rr",
-            "..r..r.rr.r..r..",
-            "..r..r....r..r..",
-            "...r..r..r..r...",
-            "....r..rr..r....",
-            ".....r....r.....",
+            ".....r.rr.r.....",
             "......rrrr......",
-            "................",
+            "rrrrrrrRRrrrrrrr",
+            "rrrrrrrRRrrrrrrr",
+            "......rrrr......",
+            ".....r.rr.r.....",
+            "....r..rr..r....",
+            ".......rr.......",
+            ".......rr.......",
+            ".......rr.......",
+            ".......rr.......",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['r'] = new Color(225, 70, 70, 255),
+            ['r'] = new Color(255, 80, 80, 200),
+            ['R'] = new Color(255, 40, 40, 255),
         });
 
+    // Full heart - health indicator
     public static SpriteDefinition HeartFull { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
             "................",
-            "....rr....rr....",
-            "...rRRr..rRRr...",
-            "..rRRRRrrRRRRr..",
-            "..rRRRRRRRRRRr..",
-            "..rRRRRRRRRRRr..",
-            "...rRRRRRRRRr...",
-            "....rRRRRRRr....",
-            ".....rRRRRr.....",
-            "......rRRr......",
-            ".......rr.......",
-            "................",
+            "..ddd....ddd....",
+            ".dRRRd..dRRRd...",
+            "dRrRRRddRRRrRd..",
+            "dRRRRRRRRRRRRd..",
+            "dRRRRRRRRRRRRd..",
+            ".dRRRRRRRRRRd...",
+            "..dRRRRRRRRd....",
+            "...dRRRRRRd.....",
+            "....dRRRRd......",
+            ".....dRRd.......",
+            "......dd........",
             "................",
             "................",
             "................",
@@ -251,8 +260,9 @@ internal static class SpriteArt
         },
         Palette: new Dictionary<char, Color>
         {
-            ['r'] = new Color(120, 22, 22, 255),
-            ['R'] = new Color(232, 66, 66, 255),
+            ['d'] = new Color(100, 20, 30, 255),
+            ['R'] = new Color(220, 50, 70, 255),
+            ['r'] = new Color(255, 120, 140, 255), // shine
         });
 
     public static SpriteDefinition HeartEmpty { get; } = new(
@@ -261,17 +271,17 @@ internal static class SpriteArt
         Pixels: new[]
         {
             "................",
-            "....rr....rr....",
-            "...r..r..r..r...",
-            "..r....rr....r..",
-            "..r..........r..",
-            "..r..........r..",
-            "...r........r...",
-            "....r......r....",
-            ".....r....r.....",
-            "......r..r......",
-            ".......rr.......",
-            "................",
+            "..ddd....ddd....",
+            ".d...d..d...d...",
+            "d.....dd.....d..",
+            "d............d..",
+            "d............d..",
+            ".d..........d...",
+            "..d........d....",
+            "...d......d.....",
+            "....d....d......",
+            ".....d..d.......",
+            "......dd........",
             "................",
             "................",
             "................",
@@ -279,95 +289,187 @@ internal static class SpriteArt
         },
         Palette: new Dictionary<char, Color>
         {
-            ['r'] = new Color(140, 72, 72, 255),
+            ['d'] = new Color(120, 80, 90, 255),
         });
 
+    // Health pickup - green cross
     public static SpriteDefinition HealthPickup { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
             "................",
-            ".......gg.......",
-            "......gGGg......",
-            ".....gGGGGg.....",
-            "....gGGrrGGg....",
-            "...gGGrrrrGGg...",
-            "..gGGrrrRrrGGg..",
-            ".gGGrrrRRRrrGGg.",
-            ".gGGrrrRRRrrGGg.",
-            "..gGGrrrRrrGGg..",
-            "...gGGrrrrGGg...",
-            "....gGGrrGGg....",
-            ".....gGGGGg.....",
-            "......gGGg......",
-            ".......gg.......",
+            "......oooo......",
+            ".....oGGGGo.....",
+            "....oGGggGGo....",
+            "...oGGgrrrgGo...",
+            "..oGGgrrRrrGGo..",
+            ".oGGgrRRRRrgGGo.",
+            ".oGGgrrRRrrgGGo.",
+            ".oGGgrrRRrrgGGo.",
+            ".oGGgrRRRRrgGGo.",
+            "..oGGgrrRrrGGo..",
+            "...oGGgrrrgGo...",
+            "....oGGggGGo....",
+            ".....oGGGGo.....",
+            "......oooo......",
             "................",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['g'] = new Color(34, 78, 34, 255),     // outline
-            ['G'] = new Color(60, 140, 60, 255),   // green background
-            ['r'] = new Color(180, 40, 40, 255),   // cross dark
-            ['R'] = new Color(240, 80, 80, 255),   // cross light
+            ['o'] = new Color(30, 70, 40, 255),    // outline
+            ['G'] = new Color(60, 160, 80, 255),   // green bg
+            ['g'] = new Color(80, 180, 100, 255),  // green light
+            ['r'] = new Color(200, 50, 60, 255),   // cross
+            ['R'] = new Color(255, 100, 110, 255), // cross light
         });
 
+    // Shield power-up
     public static SpriteDefinition Shield { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
             "................",
-            "....bbbbbbbb....",
-            "...bBBBBBBBBb...",
-            "..bBBBBBBBBBBb..",
-            "..bBBBccccBBBb..",
-            "..bBBBcCCcBBBb..",
-            "..bBBBcCCcBBBb..",
-            "..bBBBcCCcBBBb..",
-            "...bBBcCCcBBb...",
-            "...bBBcCCcBBb...",
-            "....bBcCCcBb....",
-            ".....bcCCcb.....",
-            "......bccb......",
-            ".......bb.......",
+            "...oooooooo.....",
+            "..oBBBBBBBBo....",
+            "..oBBBbbbBBo....",
+            "..oBBbsGGbBo....",
+            "..oBBbGGGGbBo...",
+            "..oBBbGGGGbBo...",
+            "...oBbGGGGbBo...",
+            "...oBbGGGGbBo...",
+            "....obGGGGbo....",
+            ".....obGGbo.....",
+            "......obbo......",
+            ".......oo.......",
+            "................",
             "................",
             "................",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['b'] = new Color(40, 50, 90, 255),    // border
-            ['B'] = new Color(70, 130, 200, 255),  // shield blue
-            ['c'] = new Color(180, 160, 60, 255),  // crest outline
-            ['C'] = new Color(240, 220, 100, 255), // crest gold
+            ['o'] = new Color(30, 50, 90, 255),    // outline
+            ['B'] = new Color(70, 140, 220, 255),  // blue
+            ['b'] = new Color(100, 170, 240, 255), // blue light
+            ['s'] = new Color(180, 150, 50, 255),  // gold shadow
+            ['G'] = new Color(255, 220, 80, 255),  // gold emblem
         });
 
+    // Speed boost - lightning bolt
     public static SpriteDefinition SpeedBoost { get; } = new(
         Width: 16,
         Height: 16,
         Pixels: new[]
         {
             "................",
-            "..........yy....",
-            ".........yYy....",
-            "........yYy.....",
-            ".......yYy......",
-            "......yYYyyyy...",
-            ".....yYYYYYYy...",
-            "....yYYYYYYy....",
-            "...yYYYYYYy.....",
-            "...yyyyyYYy.....",
-            ".......yYy......",
-            "......yYy.......",
-            ".....yYy........",
-            ".....yy.........",
+            ".........oo.....",
+            "........oYo.....",
+            ".......oYYo.....",
+            "......oYYYo.....",
+            ".....oYYYYo.....",
+            "....oYYYYYooo...",
+            "...oYYYYYYYYo...",
+            "...oooooYYYo....",
+            "......oYYYo.....",
+            ".....oYYYo......",
+            "....oYYYo.......",
+            "...oYYo.........",
+            "...oYo..........",
+            "...oo...........",
+            "................",
+        },
+        Palette: new Dictionary<char, Color>
+        {
+            ['o'] = new Color(150, 120, 30, 255),  // outline
+            ['Y'] = new Color(255, 230, 80, 255),  // yellow
+        });
+
+    // Star for celebration effects
+    public static SpriteDefinition Star { get; } = new(
+        Width: 16,
+        Height: 16,
+        Pixels: new[]
+        {
+            "................",
+            ".......YY.......",
+            ".......YY.......",
+            "......YYYY......",
+            ".....YYYYYY.....",
+            "YYYYYYYYYYYYYYYY",
+            ".YYYYYYYYYYYYYY.",
+            "..YYYYYYYYYYYY..",
+            "...YYYYYYYYYY...",
+            "...YYYYYYYY.....",
+            "...YYY..YYYY....",
+            "..YYY....YYYY...",
+            "..YY......YYY...",
+            "................",
             "................",
             "................",
         },
         Palette: new Dictionary<char, Color>
         {
-            ['y'] = new Color(180, 140, 40, 255),  // outline
-            ['Y'] = new Color(255, 230, 80, 255),  // lightning yellow
+            ['Y'] = new Color(255, 230, 80, 255),
+        });
+
+    // Trophy for win screen
+    public static SpriteDefinition Trophy { get; } = new(
+        Width: 16,
+        Height: 16,
+        Pixels: new[]
+        {
+            "................",
+            "GG..........GG..",
+            "GGggggggggggGG..",
+            "GGggGGGGGGggGG..",
+            "GGggGGGGGGggGG..",
+            ".GggGGGGGGggG...",
+            "..gGGGGGGGGg....",
+            "...gGGGGGGg.....",
+            "....gGGGGg......",
+            ".....gggg.......",
+            "......gg........",
+            ".....gggg.......",
+            "....gggggg......",
+            "....gggggg......",
+            "................",
+            "................",
+        },
+        Palette: new Dictionary<char, Color>
+        {
+            ['g'] = new Color(180, 140, 40, 255),  // dark gold
+            ['G'] = new Color(255, 220, 80, 255),  // gold
+        });
+
+    // Skull for game over
+    public static SpriteDefinition Skull { get; } = new(
+        Width: 16,
+        Height: 16,
+        Pixels: new[]
+        {
+            "................",
+            ".....oooooo.....",
+            "...ooWWWWWWoo...",
+            "..oWWWWWWWWWWo..",
+            "..oWWkWWWWkWWo..",
+            "..oWWkkWWkkWWo..",
+            "..oWWWWkkWWWWo..",
+            "..oWWWWWWWWWWo..",
+            "...oWWkkkWWo....",
+            "...oWkWkWkWo....",
+            "....oWWWWWo.....",
+            ".....ooooo......",
+            "................",
+            "................",
+            "................",
+            "................",
+        },
+        Palette: new Dictionary<char, Color>
+        {
+            ['o'] = new Color(80, 80, 90, 255),    // outline
+            ['W'] = new Color(230, 230, 235, 255), // white bone
+            ['k'] = new Color(30, 30, 35, 255),    // black
         });
 }
 

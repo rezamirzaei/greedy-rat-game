@@ -19,6 +19,9 @@ internal sealed class SpriteTextures : IDisposable
         HealthPickup = CreateTexture(SpriteArt.HealthPickup);
         Shield = CreateTexture(SpriteArt.Shield);
         SpeedBoost = CreateTexture(SpriteArt.SpeedBoost);
+        Star = CreateTexture(SpriteArt.Star);
+        Trophy = CreateTexture(SpriteArt.Trophy);
+        Skull = CreateTexture(SpriteArt.Skull);
     }
 
     public Texture2D RatA { get; }
@@ -34,6 +37,9 @@ internal sealed class SpriteTextures : IDisposable
     public Texture2D HealthPickup { get; }
     public Texture2D Shield { get; }
     public Texture2D SpeedBoost { get; }
+    public Texture2D Star { get; }
+    public Texture2D Trophy { get; }
+    public Texture2D Skull { get; }
 
     public void Dispose()
     {
@@ -50,6 +56,9 @@ internal sealed class SpriteTextures : IDisposable
         Raylib.UnloadTexture(HealthPickup);
         Raylib.UnloadTexture(Shield);
         Raylib.UnloadTexture(SpeedBoost);
+        Raylib.UnloadTexture(Star);
+        Raylib.UnloadTexture(Trophy);
+        Raylib.UnloadTexture(Skull);
     }
 
     private static Texture2D CreateTexture(SpriteDefinition definition)
